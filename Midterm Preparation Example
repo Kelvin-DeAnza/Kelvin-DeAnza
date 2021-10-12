@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    // Named constants (variables with a fixed value) 
+    const double PRICE_PER_CUBIC_FOOT = 0.23;
+
+    // Variables 
+    int length;
+    int width;
+    int height;
+    double totalCost;
+    
+    // Get input section 
+    cin >> length; 
+    cin >> width;
+    cin >> height;
+    
+    // Calculation section
+    double volume = static_cast<double>(length) * static_cast<double>(width) * static_cast<double>(height);
+    totalCost = volume * PRICE_PER_CUBIC_FOOT;
+    
+    // Display output section
+    cout << "what are the crate's dimension (in feet)?:" << endl;
+    cout << "Length： " << length << endl;
+    cout << "Width: " << width << endl;
+    cout << "Height: " << height << endl;
+    cout << "The volume of the crate is ";
+    cout << fixed << setprecision(2) << volume;
+    cout <<  " cubic feet." << endl;
+    cout << "Cost to build: $" << totalCost << endl;
+    
+    return 0;
+}
